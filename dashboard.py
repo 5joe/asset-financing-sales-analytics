@@ -89,7 +89,7 @@ VIEWS = [
     "vw_avg_issuance_time_by_agent",
     "vw_avg_issuance_time_by_team",
     "vw_avg_time_first_change_to_issuance",
-    "vw_daily_active_loans",
+    "vw_daily_active_loans"
 ]
 
 
