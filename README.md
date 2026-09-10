@@ -64,7 +64,7 @@ Streamlit app, 4 pages (Overview / Team & Agent Performance / Loan Types & Sourc
    DB_SCHEMA=Mogo
    ```
 
-   All of these have defaults except `PGPASSWORD` — see `get_db_engine()` in `db.py`. Note `DB_HOST=127.0.0.1` only works if you're running against a local Postgres — pointing at a remote one needs its actual address (see below, this one cost me a couple hours).
+   All of these have defaults except `PGPASSWORD`: see `get_db_engine()` in `db.py`. Note `DB_HOST=127.0.0.1` only works if you're running against a local Postgres : pointing at a remote one needs its actual address (see below, this one cost me a couple hours).
 3. Run the three SQL scripts in order against a database that has the `Mogo` schema's raw tables (`applications`, `applications_status_changes`, `user_team_changes`, `source_label`).
 4. Launch the dashboard:
 
@@ -74,7 +74,7 @@ Streamlit app, 4 pages (Overview / Team & Agent Performance / Loan Types & Sourc
 
 ## Data Access
 
-The database this project queries lives on a private VPS, not a public endpoint. There's no public connection string to plug in access is locked down at the network level (Postgres config, DB-level ACLs, and infrastructure firewall rules), separate from anything in this repo. If you need access for review purposes, reach out directly rather than trying to point `db.py` at it.
+The database this project queries lives on a private VPS, not a public endpoint. There's no public connection string to plug in; access is locked down at the network level (Postgres config, DB-level ACLs, and infrastructure firewall rules), separate from anything in this repo. If you need access for review purposes, reach out directly rather than trying to point `db.py` at it. **Postgres itself is further restricted via `firewalld` to a single whitelisted IP for direct admin access; the dashboard app connects locally on the same server and isn't subject to this restriction, so end users never need Postgres access at all.**
 
 ## Problems I ran into (and how I debugged them)
 
