@@ -1,0 +1,17 @@
+[Unit]
+Description=Mogo Pipeline Streamlit Dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/Mogo_pipeline
+ExecStart=/root/Mogo_pipeline/.venv/bin/streamlit run /root/Mogo_pipeline/dashboard.py --server.address 0.0.0.0 --server.port 8501
+Restart=always
+RestartSec=5
+Environment=STREAMLIT_SERVER_HEADLESS=true
+Environment=STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+
+[Install]
+WantedBy=multi-user.target
