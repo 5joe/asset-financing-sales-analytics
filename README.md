@@ -39,8 +39,8 @@ Status code `5` = loan issued/paid out, `6` = loan closed both come from `applic
 
 Streamlit app, 4 pages (Overview / Team & Agent Performance / Loan Types & Sources / Timing & Volume), with:
 
-- Filters — team multiselect, top-N agent slider, line/bar toggle, date-range slider on the active-loans timeline
-- KPI cards — total loans issued, repeat customers, current active loan count
+- Filters: team multiselect, top-N agent slider, line/bar toggle, date-range slider on the active-loans timeline
+- KPI cards: total loans issued, repeat customers, current active loan count
 - A restrained dark-mode design system: one blue-tone palette plus a single terracotta accent for two-way contrasts, `plotly_dark` templates on every chart, theme set at the Streamlit framework level via `.streamlit/config.toml`
 - All 14 views loaded through a single reused connection instead of opening/closing one per query
 
