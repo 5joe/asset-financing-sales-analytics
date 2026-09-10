@@ -56,12 +56,12 @@ Streamlit app, 4 pages (Overview / Team & Agent Performance / Loan Types & Sourc
 2. Set your Postgres connection as environment variables (a `.env` file works, `db.py` loads it automatically):
 
    ```
-   DB_USER=appuser
-   PGPASSWORD=your_password
-   DB_HOST=127.0.0.1
+   DB_USER=*****
+   PGPASSWORD=*****
+   DB_HOST=***.***.***.**
    DB_PORT=5432
-   DB_NAME=appdb
-   DB_SCHEMA=Mogo
+   DB_NAME=*****
+   DB_SCHEMA=*****
    ```
 
    All of these have defaults except `PGPASSWORD`: see `get_db_engine()` in `db.py`. Note `DB_HOST=127.0.0.1` only works if you're running against a local Postgres : pointing at a remote one needs its actual address (see below, this one cost me a couple hours).
