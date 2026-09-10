@@ -5,9 +5,9 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-User=root
-WorkingDirectory=/root/Mogo_pipeline
-ExecStart=/root/Mogo_pipeline/.venv/bin/streamlit run /root/Mogo_pipeline/dashboard.py --server.address 0.0.0.0 --server.port 8501
+User=****
+WorkingDirectory=/****/Mogo_pipeline
+ExecStart=/****/Mogo_pipeline/.venv/bin/streamlit run /root/Mogo_pipeline/dashboard.py --server.address 0.0.0.0 --server.port 8501
 Restart=always
 RestartSec=5
 Environment=STREAMLIT_SERVER_HEADLESS=true
